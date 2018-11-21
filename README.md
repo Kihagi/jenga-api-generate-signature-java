@@ -15,7 +15,7 @@ openssl genrsa -out privatekey.pem 2048 -nodes
 ```
 Once you are successful with the above command a file (pkcs8_privatekey.pem) will be created on your present directory, proceed to export the public key from the keypair generated. The command below shows how to do it:
 ```bash
-openssl genrsa -out privatekey.pem 2048 -nodes
+openssl rsa -in privatekey.pem -outform PEM -pubout -out publickey.pem
 ```
 If the above command is successful, a new file (publickey.pem) will be created on your present directory. Copy the contents of this file and add it on our jengaHQ portal.
 
